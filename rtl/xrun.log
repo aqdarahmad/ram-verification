@@ -1,0 +1,29 @@
+xrun(64): 25.03-s006: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	25.03-s006: Started on Feb 25, 2026 at 00:50:15 EET
+xrun
+	design.sv
+file: design.sv
+	module worklib.dual_port_ram:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		dual_port_ram
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.dual_port_ram:sv <0x79c8c373>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		        Instances  Unique
+		Modules:        1       1
+		Registers:      3       3
+		Always blocks:  1       1
+	Writing initial simulation snapshot: worklib.dual_port_ram:sv
+Loading snapshot worklib.dual_port_ram:sv .................... Done
+xcelium> source /usr/cadence/installs/XCELIUM2503/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun(64)	25.03-s006: Exiting on Feb 25, 2026 at 00:50:15 EET  (total: 00:00:00)
