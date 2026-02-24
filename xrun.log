@@ -1,10 +1,10 @@
 xrun(64): 25.03-s006: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	25.03-s006: Started on Feb 25, 2026 at 01:26:46 EET
+TOOL:	xrun(64)	25.03-s006: Started on Feb 25, 2026 at 01:38:50 EET
 xrun
 	-uvm
 	-f filelist.f
-		rtl/design.sv
-		pkg/ram-pkg.sv
+		rtl/design.svh
+		pkg/ram-pkg.svh
 		uvm/ram-defines.svh
 		uvm/ram-interface.svh
 		uvm/ram-trans.svh
@@ -23,57 +23,63 @@ xrun
 		uvm/ram-base-test.svh
 	-access +rwc
 	-gui
-file: pkg/ram-pkg.sv
+file: rtl/design.svh
+	module worklib.dual_port_ram:svh
+		errors: 0, warnings: 0
+file: pkg/ram-pkg.svh
   `include "../uvm/ram-defines.svh"
                                   |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,6|34): cannot open include file '../uvm/ram-defines.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,6|34): cannot open include file '../uvm/ram-defines.svh'.
   `include "../uvm/ram-interface.svh"
                                     |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,7|36): cannot open include file '../uvm/ram-interface.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,7|36): cannot open include file '../uvm/ram-interface.svh'.
   `include "../uvm/ram-trans.svh"
                                 |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,8|32): cannot open include file '../uvm/ram-trans.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,8|32): cannot open include file '../uvm/ram-trans.svh'.
   `include "../uvm/ram-base-wr-seq.svh"
                                       |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,9|38): cannot open include file '../uvm/ram-base-wr-seq.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,9|38): cannot open include file '../uvm/ram-base-wr-seq.svh'.
   `include "../uvm/ram-base-rd-seq.svh"
                                       |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,10|38): cannot open include file '../uvm/ram-base-rd-seq.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,10|38): cannot open include file '../uvm/ram-base-rd-seq.svh'.
   `include "../uvm/ram-wr-sequencer.svh"
                                        |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,11|39): cannot open include file '../uvm/ram-wr-sequencer.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,11|39): cannot open include file '../uvm/ram-wr-sequencer.svh'.
   `include "../uvm/ram-rd-sequencer.svh"
                                        |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,12|39): cannot open include file '../uvm/ram-rd-sequencer.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,12|39): cannot open include file '../uvm/ram-rd-sequencer.svh'.
   `include "../uvm/ram-wr-driver.svh"
                                     |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,13|36): cannot open include file '../uvm/ram-wr-driver.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,13|36): cannot open include file '../uvm/ram-wr-driver.svh'.
   `include "../uvm/ram-rd-driver.svh"
                                     |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,14|36): cannot open include file '../uvm/ram-rd-driver.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,14|36): cannot open include file '../uvm/ram-rd-driver.svh'.
   `include "../uvm/ram-wr-monitor.svh"
                                      |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,15|37): cannot open include file '../uvm/ram-wr-monitor.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,15|37): cannot open include file '../uvm/ram-wr-monitor.svh'.
   `include "../uvm/ram-rd-monitor.svh"
                                      |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,16|37): cannot open include file '../uvm/ram-rd-monitor.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,16|37): cannot open include file '../uvm/ram-rd-monitor.svh'.
   `include "../uvm/ram-wr-agent.svh"
                                    |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,17|35): cannot open include file '../uvm/ram-wr-agent.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,17|35): cannot open include file '../uvm/ram-wr-agent.svh'.
   `include "../uvm/ram-rd-agent.svh"
                                    |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,18|35): cannot open include file '../uvm/ram-rd-agent.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,18|35): cannot open include file '../uvm/ram-rd-agent.svh'.
   `include "../uvm/ram-scoreboard.svh"
                                      |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,19|37): cannot open include file '../uvm/ram-scoreboard.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,19|37): cannot open include file '../uvm/ram-scoreboard.svh'.
   `include "../uvm/ram-env.svh"
                               |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,20|30): cannot open include file '../uvm/ram-env.svh'.
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,20|30): cannot open include file '../uvm/ram-env.svh'.
   `include "../uvm/ram-base-test.svh"
                                     |
-xmvlog: *E,COFILX (pkg/ram-pkg.sv,21|36): cannot open include file '../uvm/ram-base-test.svh'.
-	package worklib.ram_pkg:sv
+xmvlog: *E,COFILX (pkg/ram-pkg.svh,21|36): cannot open include file '../uvm/ram-base-test.svh'.
+	package worklib.ram_pkg:svh
 		errors: 16, warnings: 0
+file: uvm/ram-interface.svh
+	interface worklib.ram_if:svh
+		errors: 0, warnings: 0
 file: uvm/ram-trans.svh
 class ram_trans extends uvm_sequence_item;
                                         |
@@ -196,4 +202,4 @@ xmvlog: *E,NOTDIR (uvm/ram-base-test.svh,23|16): `uvm_info: not a recognized dir
 	Total errors/warnings found outside modules and primitives:
 		errors: 34, warnings: 1
 xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
-TOOL:	xrun(64)	25.03-s006: Exiting on Feb 25, 2026 at 01:26:46 EET  (total: 00:00:00)
+TOOL:	xrun(64)	25.03-s006: Exiting on Feb 25, 2026 at 01:38:50 EET  (total: 00:00:00)

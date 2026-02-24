@@ -1,5 +1,3 @@
-1771973153 /home/Trainee23/ram-verification/rtl/design.sv
-1771974266 /home/Trainee23/ram-verification/pkg/ram-pkg.sv
 1771974710 /home/Trainee23/ram-verification/uvm/ram-defines.svh
 1771974910 /home/Trainee23/ram-verification/uvm/ram-interface.svh
 1771974931 /home/Trainee23/ram-verification/uvm/ram-trans.svh
@@ -16,3 +14,5 @@
 1771975241 /home/Trainee23/ram-verification/uvm/ram-scoreboard.svh
 1771975254 /home/Trainee23/ram-verification/uvm/ram-env.svh
 1771975269 /home/Trainee23/ram-verification/uvm/ram-base-test.svh
+1771973153 /home/Trainee23/ram-verification/rtl/design.svh
+1771974266 /home/Trainee23/ram-verification/pkg/ram-pkg.svh

@@ -1,6 +1,6 @@
 # filelist.f
-rtl/design.sv
-pkg/ram-pkg.sv
+rtl/design.svh
+pkg/ram-pkg.svh
 uvm/ram-defines.svh
 uvm/ram-interface.svh
 uvm/ram-trans.svh
