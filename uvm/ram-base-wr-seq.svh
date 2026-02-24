@@ -1,0 +1,23 @@
+// uvm/ram-base-wr-seq.svh
+`ifndef RAM_BASE_WR_SEQ_SVH
+`define RAM_BASE_WR_SEQ_SVH
+
+class ram_base_wr_seq extends uvm_sequence #(ram_trans);
+    `uvm_object_utils(ram_base_wr_seq)
+
+    function new(string name="ram_base_wr_seq");
+        super.new(name);
+    endfunction
+
+    virtual task body();
+        ram_trans tr = ram_trans::type_id::create("tr");
+        tr.kind = `RAM_WRITE;
+        tr.addr = $urandom_range(0,15);
+        tr.data = $urandom;
+        `uvm_info("SEQ","Write sequence generated a transaction",UVM_MEDIUM)
+        start_item(tr);
+        finish_item(tr);
+    endtask
+endclass
+
+`endif
