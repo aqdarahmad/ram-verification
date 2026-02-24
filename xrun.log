@@ -1,0 +1,199 @@
+xrun(64): 25.03-s006: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	25.03-s006: Started on Feb 25, 2026 at 01:26:46 EET
+xrun
+	-uvm
+	-f filelist.f
+		rtl/design.sv
+		pkg/ram-pkg.sv
+		uvm/ram-defines.svh
+		uvm/ram-interface.svh
+		uvm/ram-trans.svh
+		uvm/ram-base-wr-seq.svh
+		uvm/ram-base-rd-seq.svh
+		uvm/ram-wr-sequencer.svh
+		uvm/ram-rd-sequencer.svh
+		uvm/ram-wr-driver.svh
+		uvm/ram-rd-driver.svh
+		uvm/ram-wr-monitor.svh
+		uvm/ram-rd-monitor.svh
+		uvm/ram-wr-agent.svh
+		uvm/ram-rd-agent.svh
+		uvm/ram-scoreboard.svh
+		uvm/ram-env.svh
+		uvm/ram-base-test.svh
+	-access +rwc
+	-gui
+file: pkg/ram-pkg.sv
+  `include "../uvm/ram-defines.svh"
+                                  |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,6|34): cannot open include file '../uvm/ram-defines.svh'.
+  `include "../uvm/ram-interface.svh"
+                                    |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,7|36): cannot open include file '../uvm/ram-interface.svh'.
+  `include "../uvm/ram-trans.svh"
+                                |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,8|32): cannot open include file '../uvm/ram-trans.svh'.
+  `include "../uvm/ram-base-wr-seq.svh"
+                                      |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,9|38): cannot open include file '../uvm/ram-base-wr-seq.svh'.
+  `include "../uvm/ram-base-rd-seq.svh"
+                                      |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,10|38): cannot open include file '../uvm/ram-base-rd-seq.svh'.
+  `include "../uvm/ram-wr-sequencer.svh"
+                                       |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,11|39): cannot open include file '../uvm/ram-wr-sequencer.svh'.
+  `include "../uvm/ram-rd-sequencer.svh"
+                                       |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,12|39): cannot open include file '../uvm/ram-rd-sequencer.svh'.
+  `include "../uvm/ram-wr-driver.svh"
+                                    |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,13|36): cannot open include file '../uvm/ram-wr-driver.svh'.
+  `include "../uvm/ram-rd-driver.svh"
+                                    |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,14|36): cannot open include file '../uvm/ram-rd-driver.svh'.
+  `include "../uvm/ram-wr-monitor.svh"
+                                     |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,15|37): cannot open include file '../uvm/ram-wr-monitor.svh'.
+  `include "../uvm/ram-rd-monitor.svh"
+                                     |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,16|37): cannot open include file '../uvm/ram-rd-monitor.svh'.
+  `include "../uvm/ram-wr-agent.svh"
+                                   |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,17|35): cannot open include file '../uvm/ram-wr-agent.svh'.
+  `include "../uvm/ram-rd-agent.svh"
+                                   |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,18|35): cannot open include file '../uvm/ram-rd-agent.svh'.
+  `include "../uvm/ram-scoreboard.svh"
+                                     |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,19|37): cannot open include file '../uvm/ram-scoreboard.svh'.
+  `include "../uvm/ram-env.svh"
+                              |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,20|30): cannot open include file '../uvm/ram-env.svh'.
+  `include "../uvm/ram-base-test.svh"
+                                    |
+xmvlog: *E,COFILX (pkg/ram-pkg.sv,21|36): cannot open include file '../uvm/ram-base-test.svh'.
+	package worklib.ram_pkg:sv
+		errors: 16, warnings: 0
+file: uvm/ram-trans.svh
+class ram_trans extends uvm_sequence_item;
+                                        |
+xmvlog: *E,SVNOTY (uvm/ram-trans.svh,5|40): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+    `uvm_object_utils(ram_trans)
+                    |
+xmvlog: *E,NOTDIR (uvm/ram-trans.svh,10|20): `uvm_object_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+    `uvm_object_utils(ram_trans)
+                     |
+xmvlog: *E,EXPENC (uvm/ram-trans.svh,10|21): Expecting the keyword 'endclass'.
+    function new(string name="ram_trans");
+               |
+xmvlog: *E,NEWOIC (uvm/ram-trans.svh,12|15): The class constructor method 'new' is only allowed within a class declaration.
+        super.new(name);
+            |
+xmvlog: *E,CLSSPX (uvm/ram-trans.svh,13|12): 'super' can only be used within a class scope that derives from a base class.
+    function void do_print(uvm_printer printer);
+                                     |
+xmvlog: *E,SVNOTY (uvm/ram-trans.svh,16|37): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+        `uvm_info("TRANS", $sformatf("Addr=%0h Data=%0h Kind=%0d", addr, data, kind), UVM_MEDIUM)
+                |
+xmvlog: *E,NOTDIR (uvm/ram-trans.svh,17|16): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+        `uvm_info("TRANS", $sformatf("Addr=%0h Data=%0h Kind=%0d", addr, data, kind), UVM_MEDIUM)
+                 |
+xmvlog: *E,NOTSTT (uvm/ram-trans.svh,17|17): expecting a statement [9(IEEE)].
+        `uvm_info("TRANS", $sformatf("Addr=%0h Data=%0h Kind=%0d", addr, data, kind), UVM_MEDIUM)
+                                   |
+xmvlog: *W,NOSYST (uvm/ram-trans.svh,17|35): System function '$sformatf' invoked as a task. Return value will be ignored.
+        `uvm_info("TRANS", $sformatf("Addr=%0h Data=%0h Kind=%0d", addr, data, kind), UVM_MEDIUM)
+                                                                                    |
+xmvlog: *E,EXPSMC (uvm/ram-trans.svh,17|84): expecting a semicolon (';') [10.2.2][14(IEEE)].
+        `uvm_info("TRANS", $sformatf("Addr=%0h Data=%0h Kind=%0d", addr, data, kind), UVM_MEDIUM)
+                                                                                                |
+xmvlog: *E,MISEXX (uvm/ram-trans.svh,17|96): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
+endclass
+       |
+xmvlog: *E,MPANDC (uvm/ram-trans.svh,19|7): expecting the keyword 'module', 'macromodule', 'primitive', 'connectmodule','connect', 'discipline' or 'nature' [A.1].
+file: uvm/ram-base-wr-seq.svh
+    `uvm_object_utils(ram_base_wr_seq)
+                    |
+xmvlog: *E,NOTDIR (uvm/ram-base-wr-seq.svh,6|20): `uvm_object_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+        `uvm_info("SEQ","Write sequence generated a transaction",UVM_MEDIUM)
+                |
+xmvlog: *E,NOTDIR (uvm/ram-base-wr-seq.svh,17|16): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-base-rd-seq.svh
+    `uvm_object_utils(ram_base_rd_seq)
+                    |
+xmvlog: *E,NOTDIR (uvm/ram-base-rd-seq.svh,6|20): `uvm_object_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+        `uvm_info("SEQ","Read sequence generated a transaction",UVM_MEDIUM)
+                |
+xmvlog: *E,NOTDIR (uvm/ram-base-rd-seq.svh,16|16): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-wr-sequencer.svh
+    `uvm_component_utils(ram_wr_sequencer)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-wr-sequencer.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-rd-sequencer.svh
+    `uvm_component_utils(ram_rd_sequencer)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-rd-sequencer.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-wr-driver.svh
+    `uvm_component_utils(ram_wr_driver)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-wr-driver.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+            `uvm_info("DRIVER","Write driver got transaction",UVM_MEDIUM)
+                    |
+xmvlog: *E,NOTDIR (uvm/ram-wr-driver.svh,18|20): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-rd-driver.svh
+    `uvm_component_utils(ram_rd_driver)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-rd-driver.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+            `uvm_info("DRIVER","Read driver got transaction",UVM_MEDIUM)
+                    |
+xmvlog: *E,NOTDIR (uvm/ram-rd-driver.svh,18|20): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-wr-monitor.svh
+    `uvm_component_utils(ram_wr_monitor)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-wr-monitor.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+            `uvm_info("MONITOR","Monitoring write transaction",UVM_MEDIUM)
+                    |
+xmvlog: *E,NOTDIR (uvm/ram-wr-monitor.svh,16|20): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-rd-monitor.svh
+    `uvm_component_utils(ram_rd_monitor)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-rd-monitor.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+            `uvm_info("MONITOR","Monitoring read transaction",UVM_MEDIUM)
+                    |
+xmvlog: *E,NOTDIR (uvm/ram-rd-monitor.svh,16|20): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-wr-agent.svh
+    `uvm_component_utils(ram_wr_agent)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-wr-agent.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-rd-agent.svh
+    `uvm_component_utils(ram_rd_agent)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-rd-agent.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-scoreboard.svh
+    `uvm_component_utils(ram_scoreboard)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-scoreboard.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+        `uvm_info("SCOREBOARD",$sformatf("Transaction checked: Passed=%0d Failed=%0d", passed, failed), UVM_MEDIUM)
+                |
+xmvlog: *E,NOTDIR (uvm/ram-scoreboard.svh,19|16): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+        `uvm_info("SCOREBOARD_REPORT",$sformatf("Final Scoreboard: Passed=%0d Failed=%0d", passed, failed), UVM_HIGH)
+                |
+xmvlog: *E,NOTDIR (uvm/ram-scoreboard.svh,23|16): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-env.svh
+    `uvm_component_utils(ram_env)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-env.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+file: uvm/ram-base-test.svh
+    `uvm_component_utils(ram_base_test)
+                       |
+xmvlog: *E,NOTDIR (uvm/ram-base-test.svh,6|23): `uvm_component_utils: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+        `uvm_info("TEST","Starting RAM UVM Test",UVM_LOW)
+                |
+xmvlog: *E,NOTDIR (uvm/ram-base-test.svh,20|16): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+        `uvm_info("TEST","Finished RAM UVM Test",UVM_LOW)
+                |
+xmvlog: *E,NOTDIR (uvm/ram-base-test.svh,23|16): `uvm_info: not a recognized directive or macro [2.7.3][16.3.1][16(IEEE)].
+	Total errors/warnings found outside modules and primitives:
+		errors: 34, warnings: 1
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun(64)	25.03-s006: Exiting on Feb 25, 2026 at 01:26:46 EET  (total: 00:00:00)

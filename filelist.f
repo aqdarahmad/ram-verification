@@ -1,3 +1,5 @@
+# filelist.f
+rtl/design.sv
 pkg/ram-pkg.sv
 uvm/ram-defines.svh
 uvm/ram-interface.svh
